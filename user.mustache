@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>User Directory - Main</title>
+    <title>User: {{user.name}}</title>
     <meta charset="utf-8">
     <link href="styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div class="users">
-      {{#users}}
-      <div><a href="/{{ username }}">
+      {{#user}}
+      <div class="user">
       <ul>
         <li><img src="{{avatar}}"></li>
         <li><h3>{{name}}</h3></li>
@@ -17,8 +17,8 @@
         <li>{{company}}</li>
         <li>{{^company}}Looking for work{{/company}}</li>
       </ul>
-    </a></div>
-      {{/users}}
+      </div>
+      {{/user}}
     </div>
 
   </body>
